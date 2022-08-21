@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { SuiModule } from 'ng2-semantic-ui';
 
 import { AppComponent } from './app.component';
+import { VoteStatusComponent } from './components/vote-status/vote-status.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, SuiModule],
+  declarations: [AppComponent, VoteStatusComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

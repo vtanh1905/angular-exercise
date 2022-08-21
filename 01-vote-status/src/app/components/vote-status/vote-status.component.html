@@ -1,0 +1,33 @@
+<div class="ui container">
+    <h1 class="ui header">Vote Rate</h1>
+    <div class="ui card" style="width: auto;">
+        <div class="content">
+            <div class="header">The Company Company</div>
+            <div class="meta">10 days ago</div>
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus nulla fuga totam error perspiciatis,
+                    voluptas, eum voluptate veniam assumenda facere ut ratione ipsa dolorem qui tempora consequuntur
+                    aliquam deleniti quisquam?</p>
+            </div>
+        </div>
+        <div class="extra content segments">
+            <a class="ui grey label">{{rateSelected}}</a>
+            <div class="ui segment">
+                <button class="ui primary button" (click)="isRateToogle = !isRateToogle">
+                    Rate
+                </button>
+            </div>
+            <div class="ui segment">
+                <div [suiCollapse]="isRateToogle">
+                    <div class="ui segment">
+                        <p>
+                            <ng-template ngFor  [ngForOf]="listRate" let-item>
+                                <a class="ui grey label" (click)="onClickRate($event)">{{item}}</a>
+                            </ng-template>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
